@@ -31,9 +31,9 @@ To evaluate the model after training, run:
 ```
 bash test_net.sh
 ```
-### Download Checkpoint
-- **Download Link**: [model](https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ)
-- **Extraction Code**: `y9cv`
-- **Files Included**:
+### Download checkpoint
+- Download Link: [model](https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ)
+- Extraction Code: `y9cv`
+- Files Included:
   - `BFE-HAA-Net.yaml` - Model configuration file
   - Pre-trained model weights
