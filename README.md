@@ -13,23 +13,10 @@ git clone https://github.com/03100076/BFE-HAA-Net
 cd BFE-HAA-Net
 python setup.py build develop
 
-Some projects may require special setup, please follow their own `README.md` in [configs](configs).
 ```
 ## Quick Start
 
-### Inference with Pre-trained Models
-
-1. Pick a model and its config file, for example, `fcos_R_50_1x.yaml`.
-2. Download the model `wget https://huggingface.co/tianzhi/AdelaiDet-FCOS/resolve/main/FCOS_R_50_1x.pth?download=true -O fcos_R_50_1x.pth`
-3. Run the demo with
-```
-python demo/demo.py \
-    --config-file configs/FCOS-Detection/R_50_1x.yaml \
-    --input input1.jpg input2.jpg \
-    --opts MODEL.WEIGHTS fcos_R_50_1x.pth
-```
-
-### Train Your Own Models
+### Train
 
 To train a model with "train_net.py", first
 setup the corresponding datasets following
@@ -37,25 +24,17 @@ setup the corresponding datasets following
 then run:
 
 ```
-OMP_NUM_THREADS=1 python tools/train_net.py \
-    --config-file configs/FCOS-Detection/R_50_1x.yaml \
-    --num-gpus 8 \
-    OUTPUT_DIR training_dir/fcos_R_50_1x
+bash train_net.sh
 ```
+### Test
 To evaluate the model after training, run:
 
 ```
-OMP_NUM_THREADS=1 python tools/train_net.py \
-    --config-file configs/FCOS-Detection/R_50_1x.yaml \
-    --eval-only \
-    --num-gpus 8 \
-    OUTPUT_DIR training_dir/fcos_R_50_1x \
-    MODEL.WEIGHTS training_dir/fcos_R_50_1x/model_final.pth
+bash test_net.sh
 ```
-Note that:
-- The configs are made for 8-GPU training. To train on another number of GPUs, change the `--num-gpus`.
-- If you want to measure the inference time, please change `--num-gpus` to 1.
-- We set `OMP_NUM_THREADS=1` by default, which achieves the best speed on our machines, please change it as needed.
-- This quick start is made for FCOS. If you are using other projects, please check the projects' own `README.md` in [configs](configs). 
-
-
+### Download trained Models
+- **Download Link**: [https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ](https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ)
+- **Extraction Code**: `y9cv`
+- **Files Included**:
+  - `BFE-HAA-Net.yaml` - Model configuration file
+  - Pre-trained model weights
