@@ -32,7 +32,7 @@ To evaluate the model after training, run:
 ```
 bash test_net.sh
 ```
-### Download trained Models
+### Download Checkpoint
 - **Download Link**: [https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ](https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ)
 - **Extraction Code**: `y9cv`
 - **Files Included**:
