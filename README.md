@@ -12,7 +12,6 @@ Then build BFE-HAA-Net with:
 git clone https://github.com/03100076/BFE-HAA-Net
 cd BFE-HAA-Net
 python setup.py build develop
-
 ```
 ## Quick Start
 
@@ -33,7 +32,7 @@ To evaluate the model after training, run:
 bash test_net.sh
 ```
 ### Download Checkpoint
-- **Download Link**: [https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ](https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ)
+- **Download Link**: [model](https://pan.baidu.com/s/16_tBVv03p6gs9VXYF5GJVQ)
 - **Extraction Code**: `y9cv`
 - **Files Included**:
   - `BFE-HAA-Net.yaml` - Model configuration file
