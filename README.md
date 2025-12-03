@@ -14,7 +14,7 @@ cd BFE-HAA-Net
 python setup.py build develop
 
 Some projects may require special setup, please follow their own `README.md` in [configs](configs).
-
+```
 ## Quick Start
 
 ### Inference with Pre-trained Models
