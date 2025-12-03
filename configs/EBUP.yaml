@@ -1,0 +1,37 @@
+MODEL:
+  META_ARCHITECTURE: "OneStageDetector"
+  BACKBONE:
+    NAME: "build_fcos_resnet_bifpn_backbone_v1"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS: 
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+    DEPTH: 50
+  FPN:  
+    IN_FEATURES: ["res2","res3", "res4", "res5"]
+  PROPOSAL_GENERATOR:
+    NAME: "FCOS"
+  BiFPN:
+    IN_FEATURES: ["res2", "res3", "res4", "res5"]
+    OUT_CHANNELS: 256
+    NUM_REPEATS: 1
+    NORM: "SyncBN"  
+  FCOS:
+    TOP_LEVELS: 0
+    SIZES_OF_INTEREST: [64, 128]
+    FPN_STRIDES: [8, 16, 32]
+    IN_FEATURES: ['p3', 'p4', 'p5']
+    NORM: "SyncBN" 
+  # PIXEL_MEAN: [102.9801, 115.9465, 122.7717]
+DATASETS:
+  TRAIN: ("uavdt_train_cocostyle","uavdt_val_cocostyle")
+  TEST: ("uavdt_test_cocostyle",)  
+SOLVER:
+  IMS_PER_BATCH: 8  #FCOS 8 is best
+  BASE_LR: 0.01  # Note that RetinaNet uses a different default learning rate
+  STEPS: (60000, 80000)
+  MAX_ITER: 100000
+INPUT:
+  MIN_SIZE_TRAIN: (256, 288, 320, 352, 384, 416, 448, 480, 512, 544, 576, 608)
+  MAX_SIZE_TRAIN: 700
+  MAX_SIZE_TEST: 700
+  MIN_SIZE_TEST: 500
