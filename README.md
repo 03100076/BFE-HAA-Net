@@ -1,33 +1,4 @@
-<div align="center">
-    <img src="docs/adel-logo.svg" width="160" >
-</div>
-
-#  AdelaiDet
-
-As of Jan. 2024, the CloudStor server is dead. Model files are hosted on huggingface:
-
-- https://huggingface.co/ZjuCv/AdelaiDet/tree/main
-- https://huggingface.co/tianzhi/AdelaiDet-FCOS/tree/main
-- https://huggingface.co/tianzhi/AdelaiDet-CondInst/tree/main
-- https://huggingface.co/tianzhi/AdelaiDet-BoxInst/tree/main
-
-
-*AdelaiDet* is an open source toolbox for multiple instance-level recognition tasks on top of [Detectron2](https://github.com/facebookresearch/detectron2).
-All instance-level recognition works from our group are open-sourced here.
-
-To date, AdelaiDet implements the following algorithms:
-
-* [FCOS](configs/FCOS-Detection/README.md)
-* [BlendMask](configs/BlendMask/README.md)
-* [MEInst](configs/MEInst-InstanceSegmentation/README.md)
-* [ABCNet](configs/BAText/README.md)
-* [ABCNetv2](configs/BAText#quick-start-abcnetv2) 
-* [CondInst](configs/CondInst/README.md)
-* [SOLO](https://arxiv.org/abs/1912.04488) ([mmdet version](https://github.com/WXinlong/SOLO))
-* [SOLOv2](configs/SOLOv2/README.md)
-* [BoxInst](configs/BoxInst/README.md) ([video demo](https://www.youtube.com/watch?v=NuF8NAYf5L8))
-* [DenseCL](configs/DenseCL/README.md)
-* [FCPose](configs/FCPose/README.md)
+#  BFE-HAA-Net
 
 
 
